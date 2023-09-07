@@ -2,7 +2,7 @@
 Solves a simple AK-OLG-model for closed economy in Julia (version 3)
 
 ## About
-Shows how to solve a simple deterministic overlapping-generations model (OLG) of Auerbauch-Kotlikoff type, solving for the transition path between two steady-states. Data variables are collected in a structure that is passed between functions (including unpacking to use familiar variable names). For the household problem individual cohort informations (slices) are passed as copies which (probably) allows Julia to use stack allocations. Cohorts can be computed in parallel.
+Shows how to solve a simple deterministic overlapping-generations model (OLG) of Auerbauch-Kotlikoff type, solving for the transition path between two steady-states. Data variables are collected in a structure that is passed between functions (including unpacking to use familiar variable names). For the household problem individual cohort informations (slices) are passed as copies which (probably) allows Julia to use stack allocations. This implies a performance improvement compared to version 2 though at the cost of being more error prone (passing all individual variables between functions in the right order). Cohorts can be computed in parallel.
 
 A model description can be found here: <https://github.com/solveCGE/solveOLG_doc>.
 
